@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module taskmanager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>taskmanager</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadmin%5Cdocuments%5Cvs%20code%20-%20pliki%5Czaawansowane%20techniki%20programowania%5Czadanie2%5Ctaskmanager.py">c:\users\admin\documents\vs code - pliki\zaawansowane techniki programowania\zadanie2\taskmanager.py</a></font></td></tr></table>
+    <p><tt>Moduł&nbsp;odpowiedzialny&nbsp;za&nbsp;zarządzaine&nbsp;zadaniami.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="taskmanager.html#TaskManager">TaskManager</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TaskManager">class <strong>TaskManager</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#TaskManager">TaskManager</a>()&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Klasa&nbsp;zarządzająca&nbsp;zadaniami<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TaskManager-__contains__"><strong>__contains__</strong></a>(self, *args: int | str) -&gt; None</dt><dd><tt>Sprawdza&nbsp;czy&nbsp;zadanie&nbsp;znajduje&nbsp;się&nbsp;w&nbsp;liście&nbsp;zadań.<br>
+&nbsp;<br>
+:param&nbsp;args:&nbsp;Kryteria&nbsp;wyszukiwania&nbsp;zadania.&nbsp;Dla&nbsp;wartości&nbsp;INT&nbsp;zadanie&nbsp;wyszukiwane&nbsp;jest&nbsp;po&nbsp;id.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dla&nbsp;pojedyńczej&nbsp;wartości&nbsp;STR&nbsp;zadanie&nbsp;wyszukiwane&nbsp;jest&nbsp;po&nbsp;tytule.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dla&nbsp;dwóch&nbsp;wartości&nbsp;STR&nbsp;zadanie&nbsp;wyszukiwane&nbsp;jest&nbsp;po&nbsp;tytule&nbsp;i&nbsp;opisie.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-__init__"><strong>__init__</strong></a>(self) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-add_task"><strong>add_task</strong></a> = func_wrapper(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="TaskManager-calculate_time"><strong>calculate_time</strong></a>(func)</dt><dd><tt>Dekorator&nbsp;do&nbsp;obliczania&nbsp;czasu&nbsp;wykonania&nbsp;sie&nbsp;funkcji</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-complete_task"><strong>complete_task</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask) -&gt; None</dt><dd><tt>Odznacza&nbsp;status&nbsp;zadania&nbsp;na&nbsp;zakończone&nbsp;oraz&nbsp;ustawia&nbsp;aktualną&nbsp;datę&nbsp;jako&nbsp;datę&nbsp;ukończenia&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-delete_task"><strong>delete_task</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask) -&gt; None</dt><dd><tt>Usuwa&nbsp;zadanie&nbsp;z&nbsp;listy&nbsp;zadań.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_date"><strong>edit_task_date</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask, date: str) -&gt; None</dt><dd><tt>Edytuje&nbsp;datę&nbsp;ukończenia&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.<br>
+:param&nbsp;date:&nbsp;Nowa&nbsp;data&nbsp;zakończenia&nbsp;zadania.&nbsp;Wymagany&nbsp;format:&nbsp;[dd-mm-yyyy].</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_desc"><strong>edit_task_desc</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask, desc: str) -&gt; None</dt><dd><tt>Edytuje&nbsp;opis&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.<br>
+:param&nbsp;desc:&nbsp;Nowy&nbsp;opis&nbsp;zadania.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_priority"><strong>edit_task_priority</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask, priority: int | str) -&gt; None</dt><dd><tt>Edytuje&nbsp;priorytet&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.<br>
+:param&nbsp;priority:&nbsp;Priorytet&nbsp;zadania.&nbsp;Przedział&nbsp;wartości:&nbsp;od&nbsp;1&nbsp;do&nbsp;10.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_regulrity"><strong>edit_task_regulrity</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask, regularity: int | str) -&gt; None</dt><dd><tt>Edytuje&nbsp;regularność&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.<br>
+:param&nbsp;regularity:&nbsp;Regularność&nbsp;zadania.&nbsp;Minimalna&nbsp;wartość&nbsp;=&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_status"><strong>edit_task_status</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask) -&gt; None</dt><dd><tt>Edytuje&nbsp;status&nbsp;ukończenia&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-edit_task_title"><strong>edit_task_title</strong></a>(self, task: task.Task | task.PriorityTask | task.RegularTask, title: str) -&gt; None</dt><dd><tt>Edytuje&nbsp;tytuł&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;task:&nbsp;Zadanie&nbsp;w&nbsp;postaci&nbsp;obiektu&nbsp;klasy:&nbsp;'Task'|'PriorityTask'|'RegularTask'.<br>
+:param&nbsp;title:&nbsp;Nowy&nbsp;tytuł&nbsp;zadania.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-get_tasks"><strong>get_tasks</strong></a>(self, type='Default') -&gt; list</dt><dd><tt>Zwraca&nbsp;listę&nbsp;zadań&nbsp;wybranego&nbsp;typu.<br>
+&nbsp;<br>
+:param&nbsp;type:&nbsp;Typ&nbsp;zadania&nbsp;'Default'|'Priority'|'Regular',&nbsp;domyślnie&nbsp;'Default'.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-get_tasks_completed"><strong>get_tasks_completed</strong></a>(self, reversed=False) -&gt; list</dt><dd><tt>Zwraca&nbsp;listę&nbsp;ukończonych&nbsp;zadań.<br>
+&nbsp;<br>
+:param&nbsp;reversed:&nbsp;Jeśli&nbsp;ustawione&nbsp;na&nbsp;'True'&nbsp;zwróci&nbsp;listę&nbsp;nieukończonych&nbsp;zadań.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-list_tasks"><strong>list_tasks</strong></a>(self, flag=0) -&gt; None</dt><dd><tt>Wyświetla&nbsp;zadania&nbsp;z&nbsp;listy.<br>
+&nbsp;<br>
+:param&nbsp;flag:&nbsp;Domyślnie&nbsp;wartość&nbsp;0.&nbsp;Inne&nbsp;wartości&nbsp;spowodują&nbsp;wyświetlwnie&nbsp;tylko&nbsp;nieukończonych&nbsp;zadań.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-load_tasks_from_file"><strong>load_tasks_from_file</strong></a>(self, file_name='tasks') -&gt; None</dt><dd><tt>Wczytuje&nbsp;listę&nbsp;zadań&nbsp;z&nbsp;pliku.<br>
+&nbsp;<br>
+:param&nbsp;file_name:&nbsp;Nazwa&nbsp;pliku,&nbsp;z&nbsp;którego&nbsp;wczytana&nbsp;ma&nbsp;być&nbsp;lista&nbsp;zadań.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-save_tasks_to_file"><strong>save_tasks_to_file</strong></a> = func_wrapper(*args, **kwargs)</dt></dl>
+
+<dl><dt><a name="TaskManager-sort_tasks_asc"><strong>sort_tasks_asc</strong></a>(self) -&gt; None</dt><dd><tt>Sortuje&nbsp;listę&nbsp;zadań&nbsp;rosnąco&nbsp;po&nbsp;dacie&nbsp;ukończenia.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-sort_tasks_desc"><strong>sort_tasks_desc</strong></a>(self) -&gt; None</dt><dd><tt>Sortuje&nbsp;listę&nbsp;zadań&nbsp;malejąco&nbsp;po&nbsp;dacie&nbsp;ukończenia.</tt></dd></dl>
+
+<dl><dt><a name="TaskManager-update_regular_tasks"><strong>update_regular_tasks</strong></a>(self) -&gt; None</dt><dd><tt>Uaktualnia&nbsp;status&nbsp;oraz&nbsp;datę&nbsp;zakończenia&nbsp;wszystkim&nbsp;regularnym&nbsp;zadaniom&nbsp;z&nbsp;listy&nbsp;w&nbsp;zależności&nbsp;od&nbsp;regularności&nbsp;danego&nbsp;zadania.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DEFAULT_DATE</strong> = '01-01-0001'</td></tr></table>
+</body></html>
