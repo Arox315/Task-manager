@@ -7,4 +7,9 @@ A small project for college responsible for creating and saving simple tasks (so
 ## Usage
 To run the applicatin simply run the `main.py` file.
 ## Documentation
-Task maneger [docs](taskmanager.html)
+You can find documentation to the modules in `moudule_name.html` files.
+Or you can create your own docs from docstrings using: `python -m pydoc -w module_name` in your project directory.
+## Author
+Artur Życzyński
+## License
+[MIT](https://github.com/Arox315/Task-manager/edit/main/LICENSE)
